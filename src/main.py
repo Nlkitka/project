@@ -1,6 +1,6 @@
-from src import parser
-from src import preprocessing
-from src import receive
+import parser
+import preprocessing
+import receive
 
 if __name__ == '__main__':
     pars_info = parser.ParsAllId()
