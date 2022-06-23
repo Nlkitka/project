@@ -2,7 +2,7 @@ import pika
 import json
 
 
-def send_mes(mes_body: dict) -> dict:
+def send_mes(mes_body: dict):
     """
     the function passes to the queue called "post_add_result" a dictionary with the key post id and the value ad/not ad
     :param mes_body: dictionary

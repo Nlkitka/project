@@ -6,12 +6,20 @@ russian_stopwords = stopwords.words("russian")
 
 
 class ClearText:
-    def __init__(self, dict_id_text):
+    def __init__(self, dict_id_text: dict):
+        """
+        :param dict_id_text: dict with key-post's id, value-post's text
+        """
         self.dict_id_text = dict_id_text
         self.ready_list = []
         self.final_result = {}
 
-    def get_result(self):
+    def get_result(self) -> dict:
+        """
+        a function from a dictionary of post id and text gets a dictionary with the
+        post id and the value advertising or not
+        :return: dict with  key-post's id, value-ad or not
+        """
         keys = self.dict_id_text.keys()
         for key in keys:
             post_text = self.dict_id_text.get(key)
